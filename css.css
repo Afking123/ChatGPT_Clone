@@ -1,0 +1,201 @@
+    /* Add your CSS styles here */
+    html, body {
+        height: 100%; /* 設置 html 和 body 元素高度為 100% */
+        width: 100%;
+        margin: 0; /* 清除預設邊距 */
+        padding: 0; /* 清除預設填充 */
+      }
+      .head{
+          background-color: black;color:chartreuse;
+      }
+      .container{
+        display: flex; /* 使用 Flexbox 佈局 */
+        justify-content: space-around; /* 將子元素平均分佈在容器中 */
+        align-items: center; /* 垂直居中子元素 */
+        height: 100%; /* 設置容器高度 */
+        background-color: #f0f0f0; /* 設置背景顏色 */
+      }
+      .box1 {
+        min-width:230px;
+        max-width:230px ;
+        height: 100%; /* 設置盒子高度 */
+        margin: 0; /* 清除預設邊距 */
+        border-left: 10px;
+        border-right: 10px;
+        background-color: #d7e1e7; /* 設置盒子背景顏色 */
+        display: flex;
+        flex-direction: column;
+        transition: all 0.5s ease;
+      }
+      .box2 {
+        width: 100%; /* 設置盒子寬度 */
+        height: 100%; /* 設置盒子高度 */
+        margin: 0; /* 清除預設邊距 */
+        padding: 0; /* 清除預設填充 */
+        background-color: #e3e1eb34; /* 設置盒子背景顏色 */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .Chatgptbutton{
+        height: 44px;
+        width: 145px;
+        border: none;
+        cursor: pointer;
+        padding: 8px 12px;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: #e3e1eb34;
+      }
+      .Chatgptbutton:hover{
+        background-color: #09090c10;
+      }
+      .Chatgptbutton span{
+        color: #555454;
+      }
+      .buttonright{
+        z-index: 1;
+        border: solid rgba(128, 128, 128, 0.479) 1px;
+        border-radius: 10px;
+        height: 44px;
+        width: 44px;
+      }
+      .buttonright:hover{
+        background-color: #09090c10;
+      }
+      .downlist{
+      display: block;
+      position: absolute;
+      background-color: #f9f9f9;
+      width: 150px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      z-index: 1;
+      border-radius: 10px;
+      padding: 5px;
+      height: 150px;
+      }
+      .downlist a {
+      display: block;
+      padding: 12px 16px; /* 添加適當的內邊距 */
+      text-decoration: none;
+      color: black;
+      border-radius: 5px;
+      border: 2px solid #f9f9f9;
+      }
+      .downlist a:hover{
+        border: 2px solid black;
+        background-color: #e6e6e6;
+      }
+      .upbar{
+        margin-left: 0;
+        width: 100%;
+        top: 0%;
+        position: fixed;
+        display: flex;
+        left: 230px;/* box1消失而沒遞補的原因在這 */
+        right: 0;
+        height: 60px;
+        background: #e3e1eb34;
+        justify-content: space-between;
+        padding: 5px;
+        align-items: center; /* 垂直置中 */
+        box-sizing: border-box; /* 將 padding 和 border 包含在總寬度內 */
+      }
+      .buttonrightdiv{
+        order: 2;
+      }
+      .chatgptdownlist{
+        order: 1;
+      }
+      .buttombar{
+        max-width: 800px;
+        position: fixed;
+        display: flex;
+        bottom: 0%;
+        background:#e3e1eb34;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .textbox{
+        width: 100%;
+        height: 90%;
+        border: solid white 12px;
+        border-radius: 20px;
+        line-height: 100%;
+        font-size:200%;
+        overflow-wrap: break-word;
+        resize: none;
+        overflow: hidden;
+        box-shadow:0 0 0 1px rgb(185, 185, 185),inset -30px 0 0 white;
+      }
+      .textbox:focus {
+        outline: none;
+      }
+      .buttomtextbutton{
+        position: absolute;
+        right: 3.5%;
+        width: 30px;
+        height: 30px;
+        justify-content: center;
+        border: none;
+        border-radius: 10px;
+        display: flex;
+        background-color: #cccccc;
+      }
+      .buttomtextbutton:hover .sendmessagediv{
+        visibility: visible;
+      }
+      .messagesendbuttonsvg{
+        color: #fdfdfd;
+      }
+      .buttommessageline{
+        color: black;
+        background-color: #e3e1eb34;
+      }
+      .textareaANDbutton{
+        display: flex;
+        align-items: center;
+      }
+      .buttommessagelinediv{
+        background-color: #e3e1eb34;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .sendmessagediv{
+        position: fixed;
+        bottom: 90px;
+        background-color: black;
+        color: white;
+        height: 30px;
+        align-items: center;
+        display: flex;
+        border-radius: 5px;
+        justify-content: center;
+        padding: 5px;
+        width: 100px;
+        right: 0%;
+        visibility: hidden;
+        transition: visibility 0.2s ease;
+      }
+      .closed {
+        display: none;
+        height: 0;
+        width: 0;
+        padding: 0;
+        opacity: 0;
+        overflow: hidden;
+      }
+      .sidebarcloseiconuphovered{
+        background-color: black;
+        transform: translateY(-0.15rem) rotate(15deg) translateZ(0px);
+      }
+      .sidebarcloseicondownhovered{
+        background-color: black;
+        transform: translateY(-0.15rem) rotate(-15deg) translateZ(0px);
+      }
