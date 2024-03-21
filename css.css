@@ -8,7 +8,7 @@
       .head{
           background-color: black;color:chartreuse;
       }
-      .container{
+      .containall{
         display: flex; /* 使用 Flexbox 佈局 */
         justify-content: space-around; /* 將子元素平均分佈在容器中 */
         align-items: center; /* 垂直居中子元素 */
@@ -28,7 +28,7 @@
         transition: all 0.5s ease;
       }
       .box2 {
-        width: 100%; /* 設置盒子寬度 */
+        width: 100vw; /* 設置盒子寬度 */
         height: 100%; /* 設置盒子高度 */
         margin: 0; /* 清除預設邊距 */
         padding: 0; /* 清除預設填充 */
@@ -37,9 +37,12 @@
         align-items: center;
         justify-content: center;
       }
+      .chatgptdownlist{
+        left: 0%;
+      }
       .Chatgptbutton{
         height: 44px;
-        width: 145px;
+        display: flex;
         border: none;
         cursor: pointer;
         padding: 8px 12px;
@@ -47,14 +50,24 @@
         font-size: 16px;
         font-weight: bold;
         background-color: #e3e1eb34;
+        align-items: center;
+        justify-content: center;
       }
       .Chatgptbutton:hover{
         background-color: #09090c10;
       }
       .Chatgptbutton span{
+        padding-left: 3px;
+        padding-right: 3px;
         color: #555454;
       }
+      .buttonrightdiv{
+        display: flex;
+      }
       .buttonright{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         z-index: 1;
         border: solid rgba(128, 128, 128, 0.479) 1px;
         border-radius: 10px;
@@ -88,25 +101,17 @@
         background-color: #e6e6e6;
       }
       .upbar{
-        margin-left: 0;
-        width: 100%;
         top: 0%;
         position: fixed;
         display: flex;
-        left: 230px;/* box1消失而沒遞補的原因在這 */
-        right: 0;
+        left: 230px;
+        right: 0%;
         height: 60px;
         background: #e3e1eb34;
-        justify-content: space-between;
         padding: 5px;
         align-items: center; /* 垂直置中 */
         box-sizing: border-box; /* 將 padding 和 border 包含在總寬度內 */
-      }
-      .buttonrightdiv{
-        order: 2;
-      }
-      .chatgptdownlist{
-        order: 1;
+        justify-content: space-between;
       }
       .buttombar{
         max-width: 800px;
